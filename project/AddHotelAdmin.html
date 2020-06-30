@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- including validation js file -->
+    <script src="validation.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to the external CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+	
+	<style>
+	.bg-img {
+  /* The image used */
+  background-image: url("./images/homepic.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+	</style>
+	
+    
+</head>
+<body class="container-fluid">
+	<nav class="navbar navbar-light" style="background-color: #92BD67 ">
+		<h5 class="navbar-brand" style="color:white">Travelango</h5>
+		<a href="#" style="color:white; font-weight: bold">Log out</a>
+	</nav>
+	<div class="bg-img">
+	<div class="booking-card row" style="height: 465px; font-size: 135%;">
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-12">
+					<label for="inputEmail4">Enter Hotel Name :</label>
+					<input type="text" class="form-control" id="inputEmail4" placeholder="Hotel Name">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputEmail4">Enter Location:</label>
+					<input type="text" class="form-control" id="inputEmail4" placeholder="Location">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputPassword4">Enter Price :</label>
+					<input type="number" class="form-control" id="inputPassword4" placeholder="Price">
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputEmail4">Enter Number of Rooms:</label>
+					<input type="number" name="noofRoom" min="1" max="100" class="form-control" id="inputEmail4" placeholder="Rooms">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputPassword4">Enter Rating :</label>
+					<input type="number" name="rating" step="0.1" class="form-control" id="inputPassword4" placeholder="Rating">
+				</div>
+				
+				
+			</div>
+			<div class="form-row">
+			<div class="form-group col-md-6">
+			<label class="checkbox-inline">Active :<input type="checkbox" value="">Yes</label>
+  </div>
+  </div>
+			
+			<button type="button" class="btn btn-success">Add</button>
+		
+		</form>
+	</div>
+	
+	<div class="footer">
+		<p style="padding-top: 1%; color:white">@2020 Travelango</p>	
+	</div>	
+	<script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>	
+</body>
+</html>

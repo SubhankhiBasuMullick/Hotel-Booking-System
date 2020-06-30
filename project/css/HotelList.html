@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- including validation js file -->
+    <script src="validation.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to the external CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    
+</head>
+
+<body class="container-fluid">
+	<nav class="navbar navbar-light" style="background-color: #92BD67 ">
+		<a class="navbar-brand">Travelango</a>
+		<form name="hotelList" onsubmit="return validateHotelListForm()" method="post" class="form-inline">
+			<input type="text" class="form-control mr-2" placeholder="Loaction" name="search1" Value="Kolkata">
+			<input type="date" class="form-control mr-2" placeholder="Check-In" name="search">
+			<input type="date" class="form-control mr-2" placeholder="Check-Out" name="search">
+		<!--	<input type="text" class="form-control mr-2" placeholder="1 Adult,0 Child" name="search" value="">-->
+			<button class="btn  btn-signin " type="submit" style="background-color: #219DA1; border-radius: 20px; ">Search</button>
+		</form>
+	</nav>
+
+ <div class="container d-flex justify-content-center">
+     <div class="row">
+         <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562332741/Untitled_design_11.png" class="img-responsive image"> </div>
+                 <p class="rating">9.2</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Single View</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Singla street, New Delhi, 110034</p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">$ 1,399</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562332742/Untitled_design_12.png" class="img-responsive image"> </div>
+                 <p class="rating">9.6</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Tutors Vally</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Tutor street,Frankfurt,Germany,34565</p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">$ 2,399</p>
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562332742/Untitled_design_10.png" class="img-responsive image"> </div>
+                 <p class="rating">8.2</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Architect View</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Views street, New york, 11003</p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">$ 1,699</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="footer">
+		<p style="padding-top: 1%; font-weight: bold;">@2020 Hotel Services</p>	
+	</div>	
+	<script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>	
+</body>
+</html>

@@ -1,0 +1,171 @@
+body{
+	font-family: Heveletica;
+}
+
+nav{
+	border-radius: 10px;
+}
+
+#login {
+   /*position: absolute;*/
+   top: 100px; /*adjust to fit your needs*/
+   right: 60px; /*adjust to fit your needs*/
+   /*other style you may need*/
+}
+
+nav ul {
+  margin: 0px;
+  padding: 24px 0px 5px 30px;
+}
+
+nav li {
+   margin-right: 40px;
+   list-style: none;
+   text-decoration: none;
+   display: inline;
+}
+
+nav li a {
+   text-decoration: none;
+}
+
+.card{
+	width: 70%;
+	margin: 1.5% 5% 1.5% 5%;
+	font-family: Heveletica;
+}
+
+.footer{
+	background-color: #92BD67;
+	height: 50px;
+	text-align: center;
+	margin-top: 2%;
+	border-radius: 10px;
+}
+
+.spec{
+	display:block;
+}
+
+.booking-card{
+	display: block;
+	width: 50%;
+	height: 100%;
+	background-color: #fafafa ; 
+	margin: auto;
+	margin-top: 2%;
+	padding: 2%;
+	font-family: Times New Roman;
+}
+
+.input-group.md-form.form-sm.form-1 input{
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+}
+.input-group.md-form.form-sm.form-2 input.lime-border {
+  border: 1px solid #cddc39;
+}
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
+}
+
+.paddingTB60 {padding:60px 0px 60px 0px;}
+.gray-bg {background: #F1F1F1 !important;}
+.about-title {}
+.about-title h1 {color: #535353; font-size:45px;font-weight:600;}
+.about-title span {color: #AF0808; font-size:45px;font-weight:700;}
+.about-title h3 {color: #535353; font-size:23px;margin-bottom:24px;}
+.about-title p {color: #7a7a7a;line-height: 1.8;margin: 0 0 15px;}
+.about-paddingB {padding-bottom: 12px;}
+.about-img {padding-left: 57px;}
+
+/* Social Icons */
+.about-icons {margin:48px 0px 48px 0px ;}
+.about-icons i{margin-right: 10px;padding: 0px; font-size:35px;color:#323232;box-shadow: 0 0 3px rgba(0, 0, 0, .2);}
+.about-icons li {margin:0px;padding:0;display:inline-block;}
+#social-fb:hover {color: #3B5998;transition:all .001s;}
+ #social-tw:hover {color: #4099FF;transition:all .001s;}
+ #social-gp:hover {color: #d34836;transition:all .001s;}
+ #social-em:hover {color: #f39c12;transition:all .001s;}
+ 
+ 
+ @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+.container {
+    margin-top: 100px
+}
+
+.rating {
+    position: relative;
+    display: flex;
+    width: 2.875rem;
+    height: 2.875rem;
+    margin-top: -1.75rem;
+    margin-left: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    border: .25rem solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rebeccapurple
+}
+
+.image {
+    max-width: 100%
+}
+
+.btn.btn-success{
+	border-radius: 5px;
+	
+}
+
+.card1 {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none;
+	 margin-bottom: 20px !important;
+    border-radius: .25rem
+}
+
+.card-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    color: #653399
+}
+
+.card-text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 13px
+}
+
+.marker {
+    color: red
+}
+
+.star-rating {
+    color: #f7b944
+}
+
+
+
+

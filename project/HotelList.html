@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- including validation js file -->
+    <script src="validation.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to the external CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+	
+
+    
+</head>
+
+<body class="container-fluid">
+	<nav class="navbar navbar-light" style="background-color: #92BD67 ">
+		<a class="navbar-brand" style="color:white; font-weight: bold">Travelango</a>
+		<a href="#" style="color:white; font-weight: bold">< Back</a>
+		<form name="hotelList" onsubmit="return validateHotelListForm()" method="post" class="form-inline">
+			<input type="text" class="form-control mr-2" placeholder="Loaction" name="search1" Value="Bengaluru">
+			<input type="date" class="form-control mr-2" placeholder="Check-In" name="search">
+			<input type="date" class="form-control mr-2" placeholder="Check-Out" name="search">
+			<!--<input type="number" name="noofRooms" min="1" max="6" class="form-control mr-2" placeholder="Rooms" name="search" value="">-->
+			<button class="btn  btn-signin " type="submit" style="background-color: #219DA1; color:white; border-radius: 5px; ">Search</button>
+		</form>
+	</nav>
+	
+
+ <div class="container d-flex justify-content-center">
+     <div class="row">
+         <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="images/homepic2.jpg" class="img-responsive image"> </div>
+                 <p class="rating">9.2</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Single View</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 3kms from the city</p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 100 reviews</a></p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">INR 1,399 per night</p>
+					 <button type="button" class="btn btn-success">Book Now</button>
+                 </div>
+             </div>
+         </div>
+		 <br>
+         <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="images/homepic1.jpg" class="img-responsive image"> </div>
+                 <p class="rating">9.6</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Tutors Vally</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 5kms from the city</p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 50 reviews</a></p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">INR 2,399 per night</p>
+					 <button type="button" class="btn btn-success">Book Now</button>
+                 </div>
+             </div>
+         </div>
+		 <br>
+		  <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="images/homepic4.jpg" class="img-responsive image"> </div>
+                 <p class="rating">9.0</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Paradise</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 4kms from the city</p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 30 reviews</a></p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">INR 1,499 per night</p>
+					 <button type="button" class="btn btn-success">Book Now</button>
+                 </div>
+             </div>
+         </div>
+		 <br>
+		  <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="images/homepic5.jpg" class="img-responsive image"> </div>
+                 <p class="rating">9.4</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Dumbledore</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 6kms from the city</p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 20 reviews</a></p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">INR 2,999 per night</p>
+					 <button type="button" class="btn btn-success">Book Now</button>
+                 </div>
+             </div>
+         </div>
+		 
+		 <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="images/homepic6.jpg" class="img-responsive image"> </div>
+                 <p class="rating">8.5</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Safari</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 1.5kms from the city</p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 10 reviews</a></p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">INR 1,299 per night</p>
+					 <button type="button" class="btn btn-success">Book Now</button>
+                 </div>
+             </div>
+         </div>
+		 <br>
+         <div class="col-md-4">
+             <div class="card1">
+                 <div> <img src="images/homepic3.jpg" class="img-responsive image"> </div>
+                 <p class="rating">8.2</p>
+                 <div class="card-body">
+                     <h5 class="card-title">Hotel Architect View</h5>
+                     <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 10kms from the city</p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 50 reviews</a></p>
+                     <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                     <p class="card-text">INR 1,699 per night</p>
+					 <button type="button" class="btn btn-success">Book Now</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="footer">
+		<p style="padding-top: 1%; color:white; font-weight: bold;">@2020 Travelango</p>	
+	</div>	
+	<script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>	
+</body>
+</html>
