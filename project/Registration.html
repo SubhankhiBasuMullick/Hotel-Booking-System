@@ -115,7 +115,8 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
 	</nav>
 	<div class="bg-img">
     
-	<form name="regForm"  method="post" class="container myValidation">
+  <form name="regForm"  method="post" class="container myValidation"
+   oninput='psw1.setCustomValidity(psw.value != psw1.value ? "Passwords do not match." : "")'>
     <h1>Register</h1>
 
     <label for="firstname"><b>First Name</b></label>
@@ -141,11 +142,11 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
 
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    <input type="password" id="pw1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"  placeholder="Enter Password" name="psw" required>
 	
 	 <label for="psw1"><b>Confirm Password</b></label>
-    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    <input type="password" id="pw2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password" name="psw1" required>
 	
     <input type="submit" value="Create" name="submit" class="btn" ></input>
@@ -157,10 +158,52 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
 		<p style="padding-top: 1%; color:white">@2020 Travelango</p>	
   </div>	
   <script>
+
+//     function validatePassword()
+//     {
+//       var pass1 = document.getElementById("pw1").value;
+//     var pass2 = document.getElementById("pw2").value;
+//     if(pass1 != pass2) {
+//      pass1.setCustomValidity("Passwords Don't Match");
+//    } else {
+//     pass2.setCustomValidity('');
+//   }
+//     }
+//     pass1.onchange = validatePassword;
+// pass2.onkeyup = validatePassword;
+		(function () {
+		  'use strict';
+		  window.addEventListener('load', function () {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('myValidation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function (form) {
+			  form.addEventListener('submit', function (event) {
+				if (form.checkValidity() === false) {
+				  event.preventDefault();
+				  event.stopPropagation();
+				}
+				else if (form.checkValidity() === true) {
+				  alert("Registration Successful ");
+				}
+				form.classList.add('was-validated');
+			  }, false);
+			});
+		  }, false);
+		})();
+	  </script>
+  <!-- <script>
     (function () {
       'use strict';
       window.addEventListener('load', function () {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  //       var pass1 = document.getElementById("pw1").value;
+  //   var pass2 = document.getElementById("pw2").value;
+  //   if(pass1 != pass2) {
+  //   pw2.setCustomValidity("Passwords Don't Match");
+  // } else {
+  //   pw2.setCustomValidity('');
+  // }
         var forms = document.getElementsByClassName('myValidation');
         // Loop over them and prevent submission
         var validation = Array.prototype.filter.call(forms, function (form) {
@@ -175,9 +218,11 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
             form.classList.add('was-validated');
           }, false);
         });
+        
+      }
       }, false);
     })();
-  </script>
+  </script> -->
 	
 	<script src="js/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
