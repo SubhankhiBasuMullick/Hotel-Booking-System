@@ -23,13 +23,13 @@
 <body class="container-fluid">
 	<nav class="navbar navbar-light" style="background-color: #92BD67 ">
 		<a class="navbar-brand" style="color:white; font-weight: bold">Travelango</a>
-		<a href="#" style="color:white; font-weight: bold">< Back</a>
-		<form name="hotelList" onsubmit="return validateHotelListForm()" method="post" class="form-inline">
+		<a href="home.html" style="color:white; font-weight: bold">Log out</a>
+		<form name="hotelList" action="HotelList.html" method="post" class="form-inline">
 			<input type="text" class="form-control mr-2" placeholder="Loaction" name="search1" Value="Bengaluru">
 			<input type="date" class="form-control mr-2" placeholder="Check-In" name="search">
 			<input type="date" class="form-control mr-2" placeholder="Check-Out" name="search">
 			<!--<input type="number" name="noofRooms" min="1" max="6" class="form-control mr-2" placeholder="Rooms" name="search" value="">-->
-			<button class="btn  btn-signin " type="submit" style="background-color: #219DA1; color:white; border-radius: 5px; ">Search</button>
+			<input class="btn  btn-signin " type="submit" style="background-color: #219DA1; color:white; border-radius: 5px; "></input>
 		</form>
 	</nav>
 	
@@ -43,10 +43,10 @@
                  <div class="card-body">
                      <h5 class="card-title">Hotel Single View</h5>
                      <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 3kms from the city</p>
-					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 100 reviews</a></p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="reviews.html"> 100 reviews</a></p>
                      <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
                      <p class="card-text">INR 1,399 per night</p>
-					 <button type="button" class="btn btn-success">Book Now</button>
+					 <input onClick="window.location.href='booking-form.html'"  type="submit" value="Book Now" class="btn btn-success"></input>
                  </div>
              </div>
          </div>
@@ -58,10 +58,10 @@
                  <div class="card-body">
                      <h5 class="card-title">Hotel Tutors Vally</h5>
                      <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 5kms from the city</p>
-					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 50 reviews</a></p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="reviews.html"> 50 reviews</a></p>
                      <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
                      <p class="card-text">INR 2,399 per night</p>
-					 <button type="button" class="btn btn-success">Book Now</button>
+					 <input onClick="window.location.href='booking-form.html'"  type="submit" value="Book Now" class="btn btn-success"></input>
                  </div>
              </div>
          </div>
@@ -73,10 +73,10 @@
                  <div class="card-body">
                      <h5 class="card-title">Hotel Paradise</h5>
                      <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 4kms from the city</p>
-					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 30 reviews</a></p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="reviews.html"> 30 reviews</a></p>
                      <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
                      <p class="card-text">INR 1,499 per night</p>
-					 <button type="button" class="btn btn-success">Book Now</button>
+					 <input onClick="window.location.href='booking-form.html'"  type="submit" value="Book Now" class="btn btn-success"></input>
                  </div>
              </div>
          </div>
@@ -88,10 +88,10 @@
                  <div class="card-body">
                      <h5 class="card-title">Hotel Dumbledore</h5>
                      <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 6kms from the city</p>
-					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 20 reviews</a></p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="reviews.html"> 20 reviews</a></p>
                      <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
                      <p class="card-text">INR 2,999 per night</p>
-					 <button type="button" class="btn btn-success">Book Now</button>
+					 <input onClick="window.location.href='booking-form.html'"  type="submit" value="Book Now" class="btn btn-success"></input>
                  </div>
              </div>
          </div>
@@ -103,10 +103,10 @@
                  <div class="card-body">
                      <h5 class="card-title">Hotel Safari</h5>
                      <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 1.5kms from the city</p>
-					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 10 reviews</a></p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="reviews.html"> 10 reviews</a></p>
                      <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
                      <p class="card-text">INR 1,299 per night</p>
-					 <button type="button" class="btn btn-success">Book Now</button>
+					 <input onClick="window.location.href='booking-form.html'"  type="submit" value="Book Now" class="btn btn-success"></input>
                  </div>
              </div>
          </div>
@@ -118,10 +118,10 @@
                  <div class="card-body">
                      <h5 class="card-title">Hotel Architect View</h5>
                      <p class="card-text"><i class="fa fa-map-marker marker"></i> Bengaluru, 10kms from the city</p>
-					 <p class="card-text"><i class="fa fa-comment"></i><a href="#"> 50 reviews</a></p>
+					 <p class="card-text"><i class="fa fa-comment"></i><a href="reviews.html"> 50 reviews</a></p>
                      <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
                      <p class="card-text">INR 1,699 per night</p>
-					 <button type="button" class="btn btn-success">Book Now</button>
+					 <input onClick="window.location.href='booking-form.html'"  type="submit" value="Book Now" class="btn btn-success"></input>
                  </div>
              </div>
          </div>

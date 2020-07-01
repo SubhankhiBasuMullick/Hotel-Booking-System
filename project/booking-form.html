@@ -38,8 +38,8 @@
 		<h5 class="navbar-brand" style="color:white; font-weight: bold">Travelango</h5>
 		<ul>
 		<div id="login">
-		<li><a href="#" style="color:white; font-weight: bold">Home</a></li>
-		<li><a href="#" style="color:white; font-weight: bold">Log out</a></li>
+		<li><a href="AboutUs.html" style="color:white; font-weight: bold">About Us</a></li>
+		<li><a href="home.html" style="color:white; font-weight: bold">Log out</a></li>
 		</div>
 		</ul>
 	</nav>
@@ -51,48 +51,74 @@
 D Bhaskaran Rd, Kensington Gardens, Kalhalli, Ulsoor, Bengaluru, Karnataka
 560042</i></p> 
 		</div>
-		<form>
+		<form method="post" class="myValidation">
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label for="inputEmail4">Enter Full Name</label>
-					<input type="text" class="form-control" id="inputEmail4" placeholder="Enter Full Name">
+					<label for="inputEmail4">Enter First Name</label>
+					<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[A-Za-z]{1,255}"  id="inputEmail4" placeholder="Enter First Name" required>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputEmail4">Enter Last Name</label>
+					<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[A-Za-z]{1,255}" id="inputEmail4" placeholder="Enter Last Name" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">Contact Details</label>
-					<input type="text" class="form-control" id="inputPassword4" placeholder="Contact Details">
+					<input type="tel" class="form-control" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10"  title="Ten digits code.Enter your mobile no." id="inputPassword4" placeholder="Contact Details" required>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="inputEmail4">From Date :</label>
-					<input type="date" class="form-control" id="inputEmail4" placeholder="mm/dd/yyyy">
+					<input type="date" class="form-control" id="inputEmail4" placeholder="mm/dd/yyyy" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">To Date :</label>
-					<input type="date" class="form-control" id="inputPassword4" placeholder="mm/dd/yyyy">
+					<input type="date" class="form-control" id="inputPassword4" placeholder="mm/dd/yyyy" required>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="inputEmail4">Enter Number of Adults :</label>
-					<input type="number" name="noofAdults" min="1" max="20" class="form-control" id="inputEmail4" placeholder="Adults">
+					<input type="number" name="noofAdults" min="1" max="20" class="form-control" id="inputEmail4" placeholder="Adults" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">Enter Number of Children :</label>
-					<input type="number" name="noofChildren" min="1" max="20" class="form-control" id="inputPassword4" placeholder="Children">
+					<input type="number" name="noofChildren" min="1" max="20" class="form-control" id="inputPassword4" placeholder="Children" >
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">Enter Number of Rooms :</label>
-					<input type="number" name="noofRooms" min="1" max="20" class="form-control" id="inputPassword4" placeholder="Rooms">
+					<input type="number" name="noofRooms" min="1" max="20" class="form-control" id="inputPassword4" placeholder="Rooms" required>
 				</div>
 			</div>
-			<button type="button" class="btn btn-success">Confirm Booking</button>
+			<input type="submit" value="Confirm Booking" class="btn btn-success"></input>
 		</form>
 	</div>
 	
 	<div class="footer">
 		<p style="padding-top: 1%; color:white">@2020 Hotel Services</p>	
 	</div>	
+	<script>
+		(function () {
+		  'use strict';
+		  window.addEventListener('load', function () {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('myValidation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function (form) {
+			  form.addEventListener('submit', function (event) {
+				if (form.checkValidity() === false) {
+				  event.preventDefault();
+				  event.stopPropagation();
+				}
+				else if (form.checkValidity() === true) {
+				  alert("Booking Successful ");
+				}
+				form.classList.add('was-validated');
+			  }, false);
+			});
+		  }, false);
+		})();
+	  </script>
 	<script src="js/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>	

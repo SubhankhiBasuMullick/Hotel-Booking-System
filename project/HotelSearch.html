@@ -35,31 +35,31 @@
 <body class="container-fluid">
 	<nav class="navbar navbar-light" style="background-color: #92BD67 ">
 		<a class="navbar-brand" style="color:white">Travelango</a>
-		<a href="#" style="color:white; font-weight: bold">Log out</a>
+		<a href="home.html" style="color:white; font-weight: bold">Log out</a>
 	</nav>
 	<div class="bg-img">
 	<div class="booking-card row" style="height: 465px; font-size: 135%;">
-		<form>
+		<form action="HotelList.html" method="POST">
 			<div class="form-row">
 				<div class="form-group col-md-12">
 					<label for="inputEmail4">Enter Location :</label>
-					<input type="text" class="form-control" id="inputEmail4" placeholder="Location">
+					<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[A-Za-z]{1,255}"  class="form-control" id="inputEmail4" placeholder="Location" required>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="inputEmail4">From Date :</label>
-					<input type="date" class="form-control" id="inputEmail4" placeholder="mm/dd/yyyy">
+					<input type="date" class="form-control" id="inputEmail4" placeholder="mm/dd/yyyy" required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">To Date :</label>
-					<input type="date" class="form-control" id="inputPassword4" placeholder="mm/dd/yyyy">
+					<input type="date" class="form-control" id="inputPassword4" placeholder="mm/dd/yyyy" required>
 				</div>
 			</div>
 			<div class="form-row">
 				<div class="form-group col-md-6">
 					<label for="inputEmail4">Enter Number of Adults :</label>
-					<input type="number" name="noofAdult" min="1" max="20" class="form-control" id="inputEmail4" placeholder="Adults">
+					<input type="number" name="noofAdult" min="1" max="20" class="form-control" id="inputEmail4" placeholder="Adults"required>
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">Enter Number of Children :</label>
@@ -67,10 +67,10 @@
 				</div>
 				<div class="form-group col-md-6">
 					<label for="inputPassword4">Enter Number of Rooms :</label>
-					<input type="number" name="noofRooms" min="1" max="20" class="form-control" id="inputPassword4" placeholder="Rooms">
+					<input type="number" name="noofRooms" min="1" max="20" class="form-control" id="inputPassword4" placeholder="Rooms"required>
 				</div>
 			</div>
-			<button type="button" class="btn btn-success">Search</button>
+			<input type="submit" value="Search"class="btn btn-success"></input>
 		</form>
 	</div>
 	
