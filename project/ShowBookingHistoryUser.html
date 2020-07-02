@@ -88,7 +88,27 @@
         <td>12th July,2020</td>
         <td>18th July,2020</td>
         <td><span class="status text-success">&bull;</span> Active</td>
-        <td><button class="btn"><i class="fa fa-trash" ></i> </button></td>
+        <td>
+          <div id="deleteModal" class="modal fade" role='dialog'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title"> </h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Do You Really Want to Delete This ?</p>
+                        
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                      <span id= 'deleteButton'></span>
+                          </div>
+                    
+                      </div>
+                    </div>
+                </div>
+          <button class="btn"  onclick="confirmDeleteModal('112')" ><i class="fa fa-trash" ></i> </button></td>
         
       </tr>
       <tr>
@@ -150,6 +170,17 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      function confirmDeleteModal(id){
+    $('#deleteModal').modal();
+	$('#deleteButton').html('<a class="btn btn-danger" onclick="deleteData('+id+')">Delete</a>');
+}     
+function deleteData(id){
+  // do your stuffs with id
+  $("#successMessage").html("Record With id "+id+" Deleted successfully!");
+  $('#deleteModal').modal('hide'); // now close modal
+}  
+    </script>
     
   </body>
 
