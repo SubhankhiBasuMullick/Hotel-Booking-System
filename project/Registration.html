@@ -43,7 +43,7 @@ body, html {
   /* The image used */
   background-image: url("./images/homepic.jpg");
 
-  min-height: 940px;
+  min-height: 1300px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -127,6 +127,19 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
     
 	<label for="username"><b>Username</b></label>
     <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "^[a-zA-Z0-9_.-]*$" title="Enter proper User Name" placeholder="Enter username" id="username" name="username" required>
+    
+    <label for="address"><b>Address</b></label>
+    <input type="text" class = "form-control item" maxlength = "30" minlength = "4" pattern = "[A-Za-z0-9'\.\-\s\,]" title="Enter proper Address" placeholder="Enter Address" id="username" name="address" required>
+    
+  
+    <label for="city"><b>City</b></label>
+    <input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper City" placeholder="Enter City" id="username" name="city" required>
+    
+    <label for="state"><b>State</b></label>
+    <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper State" placeholder="Enter State" id="username" name="state" required>
+    
+    <label for="pincode"><b>Pin Code</b></label>
+    <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$" title="Enter proper Pincode" placeholder="Enter Pincode" id="username" name="pincode" required>
     
 	
 	<label for="email"><b>Email</b></label>
