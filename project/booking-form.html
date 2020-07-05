@@ -5,6 +5,8 @@
 	<title>Travelango</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<!-- including validation js file -->
 	<script src="validation.js"></script>
@@ -43,6 +45,7 @@
 		<h5 class="navbar-brand" style="color:white; font-weight: bold">Travelango</h5>
 		<ul>
 			<div id="login">
+				<li><a href="HotelList.html" style="color:white; font-weight: bold">Back</a></li>
 				<li><a href="AboutUs.html" style="color:white; font-weight: bold">About Us</a></li>
 				<li><a href="home.html" style="color:white; font-weight: bold">Log out</a></li>
 			</div>
@@ -59,7 +62,7 @@
 					D Bhaskaran Rd, Kensington Gardens, Kalhalli, Ulsoor, Bengaluru, Karnataka
 					560042</i></p>
 			</div>
-			<form method="post" class="needs-validation" >
+			<form  action="#" method="post" class="myValidation" >
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="inputEmail4">Enter First Name<span class="required">*</span></label>
@@ -117,6 +120,15 @@
 			<p style="padding-top: 1%; color:white">@2020 Hotel Services</p>
 		</div>
 		<script>
+			function callSweetMsg(){
+			  swal({
+			   text:"Booking Successful",
+			  button: true,
+			  
+			 });
+		  }
+		</script>
+		<script>
 
 			
 				$(function ()
@@ -132,26 +144,34 @@
 
 
 </script>
-<script>
-		(function() {
-					'use strict';
-            window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-					form.addEventListener('submit', function (event) {
-						if (form.checkValidity() === false) {
-							event.preventDefault();
-							event.stopPropagation();
-						}
-						form.classList.add('was-validated');
-					}, false);
-                });
-            }, false);
-        })();
-		
-		</script>
+
+    <script>
+			(function () {
+			  'use strict';
+			  window.addEventListener('load', function () {
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				var forms = document.getElementsByClassName('myValidation');
+				// Loop over them and prevent submission
+				var validation = Array.prototype.filter.call(forms, function (form) {
+				  form.addEventListener('submit', function (event) {
+					if (form.checkValidity() === false) {
+					  event.preventDefault();
+					  event.stopPropagation();
+					}
+					else if (form.checkValidity() === true) {
+            		callSweetMsg();
+            		event.preventDefault();
+					//window.location.reload();
+
+					}
+					form.classList.add('was-validated');
+					//window.location.reload();
+				  }, false);
+				});
+			  }, false);
+			})();
+			
+		  </script>
 		<script src="js/jquery-3.1.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

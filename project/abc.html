@@ -5,15 +5,13 @@
     <title>Travelango</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+   
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-    <!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" /> -->
 
     <style>
         body,
@@ -30,7 +28,7 @@
             /* The image used */
             background-image: url("./images/homepic.jpg");
 
-            min-height: 1600px;
+            min-height: 1300px;
 
             /* Center and scale the image nicely */
             background-position: center;
@@ -91,9 +89,6 @@
             color: red;
         }
 
-        
-
-
         .alert-container {
             position: inherit;
             right: 0;
@@ -121,9 +116,9 @@
         </ul>
     </nav>
     <div class="bg-img">
-        <!-- <div id="alert_placeholder" class="alert-container d-none"></div> -->
+        <div id="alert_placeholder" class="alert-container d-none"></div>
 
-        <form name="regForm" action="#" id="frmDemo" method="POST" class="container myValidation"
+        <form name="regForm" action="#" onsubmit="return myValidation()" id="form-1" class="container"
             oninput='psw1.setCustomValidity(psw.value != psw1.value ? "Passwords do not match." : "")'>
             <h1>Register</h1>
 
@@ -179,37 +174,17 @@
                 title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
                 placeholder="Enter Password" name="psw1" required>
 
-                <input type="submit" id="submit" value="Create" name="submit" class="btn" ></input>
-            <!-- <div id="myModal" class="modal fade">
-              <div class="modal-dialog modal-confirm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <div class="icon-box">
-                      <i class="material-icons">&#xE876;</i>
-                    </div>				
-                    <h4 class="modal-title w-100">Awesome!</h4>	
-                  </div>
-                  <div class="modal-body">
-                    <p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
-                  </div>
-                </div>
-              </div>
-            </div>     -->
+            <button type="submit" name="submit"  class="btn">Create</button>
         </form>
     </div>
 
     <div class="footer">
         <p style="padding-top: 1%; color:white">@2020 Travelango</p>
     </div>
-
-    
-    <!-- <script>
+    <script>
         function showAlert(message, alerttype) {
 
-            $('#alert_placeholder').removeClass('d-none');
+             $('#alert_placeholder').removeClass('d-none');
             $('#alert_placeholder').append($('#alert_placeholder').append(
                 '<div id="alertdiv" class="alert alert-dismissible fade in ' + alerttype + '">' +
                 '<a class="close" href="Login.html"  aria-label="close" >×</a>' +
@@ -220,7 +195,7 @@
             // close it in 3 secs
             setTimeout(function () {
                 $("#alertdiv").remove();
-            }, 100000);
+            }, 3000);
         }
 
     </script>
@@ -232,52 +207,28 @@
     <script>
         function myValidation() {
             if (document.getElementById('form-1').checkValidity() === true) {
-                console.log("true");
-                showAlert("Registration successful. You will now be redirected to the Login page", "alert-success");
-                document.getElementById('form-1').reset();
+               // console.log("true");
+                // showAlert("Registration successful. You will now be redirected to the Login page", "alert-success");
+                // document.getElementById('form-1').reset();
+                swal({
+                    title: "hi",
+                    
+                    showConfirmButton: false,
+                     }
+                     );
+               // document.getElementById('form-1').reset();
+                
                 setTimeout(() => {
                     Redirect();
-                }, 100000);
+                }, 3000);
             }
             else {
                 console.log("false");
                 return false;
             }
         }
-    </script> -->
-    <script>
-    function callSweetMsg(){
-      swal({
-       text:"Registration Successful",
-      button: true,
-      
-     });
-  }
-</script>
-    <script>
-			(function () {
-			  'use strict';
-			  window.addEventListener('load', function () {
-				// Fetch all the forms we want to apply custom Bootstrap validation styles to
-				var forms = document.getElementsByClassName('myValidation');
-				// Loop over them and prevent submission
-				var validation = Array.prototype.filter.call(forms, function (form) {
-				  form.addEventListener('submit', function (event) {
-					if (form.checkValidity() === false) {
-					  event.preventDefault();
-					  event.stopPropagation();
-					}
-					else if (form.checkValidity() === true) {
-            callSweetMsg();
-            event.preventDefault();
-
-					}
-					form.classList.add('was-validated');
-				  }, false);
-				});
-			  }, false);
-			})();
-		  </script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <!-- <script>
     (function () {
       'use strict';
@@ -309,16 +260,11 @@
       }, false);
     })();
   </script> -->
-  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="validation.js"></script>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
