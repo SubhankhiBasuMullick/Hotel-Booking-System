@@ -45,7 +45,7 @@ body, html {
   /* The image used */
   background-image: url("./images/homepic.jpg");
 
-  min-height: 1300px;
+  min-height: 730px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -59,7 +59,8 @@ body, html {
   position: absolute;
   right: 0;
   margin: 20px;
-  max-width: 300px;
+  max-width: 500px;
+  line-height: 0px;
   padding: 16px;
   background-color: white;
 }
@@ -124,30 +125,39 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
 	<div class="bg-img">
 	
 	<form method="POST" class="container myValidation">
-    <h1 style="font-family:verdana; font-size:100%"><b>Change Personal Details</b></h1>
-
+    <h1 style="font-family:verdana; font-size:100%" class="mb-4"><b>Change Personal Details</b></h1>
+    <div class="form-row">
+      <div class="form-group col-md-6">
     <label for="firstname"><b>First Name</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[A-Za-z]{1,255}" title="Enter proper First name" placeholder="Enter firstname" name="firstname" required>
-	
+  </div>
+  <div class="form-group col-md-6">
 	<label for="firstname"><b>Last Name</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$"  title="Enter proper Last name" placeholder="Enter lastname" name="lastname" required>
-	
+  </div>
+  <div class="form-group col-md-12">
 	<label for="username"><b>Username</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "^[a-zA-Z0-9_.-]*$" title="Enter proper User name" placeholder="Enter username" id="username" name="username" required>
-    
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
     <label for="address"><b>Address</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "[A-Za-z0-9'\.\-\s\,]" title="Enter proper Address" placeholder="Enter Address" id="username" name="address" required>
-    
-
+    </div>
+    <div class="form-group col-md-6">
     <label for="city"><b>City</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper City" placeholder="Enter City" id="username" name="city" required>
-    
+    </div>
+    <div class="form-group col-md-6">
     <label for="state"><b>State</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper State" placeholder="Enter State" id="username" name="state" required>
-    
+    </div>
+    <div class="form-group col-md-6">
     <label for="pincode"><b>Pin Code</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$" title="Enter proper Pincode" placeholder="Enter Pincode" id="username" name="pincode" required>
-    
+    </div>
+    </div>
 	
 	<label for="email"><b>Email</b><span class="required">*</span></label>
     <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter email" name="email" required>

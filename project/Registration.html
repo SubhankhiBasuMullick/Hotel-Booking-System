@@ -30,7 +30,7 @@
             /* The image used */
             background-image: url("./images/homepic.jpg");
 
-            min-height: 1318px;
+            min-height: 750px;
 
             /* Center and scale the image nicely */
             background-position: center;
@@ -44,7 +44,8 @@
             position: absolute;
              right: 0; 
             margin: 20px;
-            max-width: 300px;
+            max-width: 500px;
+            line-height: 0px;
             
             padding: 16px;
             background-color: white;
@@ -126,59 +127,79 @@
 
         <form name="regForm" action="#" id="frmDemo" method="POST" class="container myValidation"
             oninput='psw1.setCustomValidity(psw.value != psw1.value ? "Passwords do not match." : "")'>
-            <h1>Register</h1>
-           
+            <h1 class="mb-3">Register</h1>
+            
+           <div class="form-row">
+             <div class="form-group col-md-6">
             <label for="firstname"><b>First Name</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="20" minlength="4" pattern="[A-Za-z]{1,255}"
                 title="Enter proper First Name" placeholder="Enter firstname" id="firstname" name="firstname" required>
-                
+               </div>
+               <div class="form-group col-md-6">
             <label for="firstname"><b>Last Name</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="20" minlength="4"
                 pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper Last Name" placeholder="Enter lastname"
                 id="lastname" name="lastname" required>
-              
+              </div>
+              <div class="form-group col-md-12">
             <label for="username"><b>Username</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$"
                 title="Enter proper User Name" placeholder="Enter username" id="username" name="username" required>
-                  
+             </div>
+             </div>
+             <div class="form-row">
+             <div class="form-group col-md-6"> 
             <label for="address"><b>Address</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="30" minlength="4" pattern="[A-Za-z0-9'\.\-\s\,]"
                 title="Enter proper Address" placeholder="Enter Address" id="username" name="address" required>
-                         
+             </div>  
+             <div class="form-group col-md-6">          
             <label for="city"><b>City</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="20" minlength="4"
                 pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper City" placeholder="Enter City" id="username"
                 name="city" required>
-                  
+             </div>
+             <div class="form-group col-md-6"> 
+
             <label for="state"><b>State</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="15" minlength="4"
                 pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" title="Enter proper State" placeholder="Enter State" id="username"
                 name="state" required>
-                 
+                </div>
+                
+                <div class="form-group col-md-6">   
             <label for="pincode"><b>Pin Code</b><span class="required">*</span></label>
             <input type="text" class="form-control item" maxlength="15" minlength="4"
                 pattern="^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$" title="Enter proper Pincode" placeholder="Enter Pincode"
                 id="username" name="pincode" required>
-                          
+                </div>
+                </div>  
+                <div class="form-row">   
+                  <div class="form-group col-md-6">     
             <label for="email"><b>Email</b><span class="required">*</span></label>
             <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter email" name="email"
                 required>
-                        
-              
+                    </div>    
+                    <div class="form-group col-md-6">
             <label for="phoneNumber"><b>Phone number</b><span class="required">*</span> </label>
             <input type="tel" id="telphone" name="telphone" placeholder="Enter your mobile no."
                 pattern="[0-9]{3}[0-9]{3}[0-9]{4}" maxlength="10" title="Ten digits code.Enter your mobile no."
                 required>
+                </div>
+                <div class="form-group col-md-6">
 
             <label for="psw"><b>Password</b><span class="required">*</span></label>
             <input type="password" id="pw1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
                 placeholder="Enter Password" name="psw" required>
-
+                  </div>
+                  <div class="form-group col-md-6">
             <label for="psw1"><b>Confirm Password</b><span class="required">*</span></label>
             <input type="password" id="pw2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
                 placeholder="Enter Password" name="psw1" required>
+                </div>
+                </div>
 
                 <input type="submit" id="submit" value="Create" name="submit" class="btn" ></input>
             <!-- <div id="myModal" class="modal fade">
@@ -199,6 +220,7 @@
                 </div>
               </div>
             </div>     -->
+            
         </form>
     </div>
 
