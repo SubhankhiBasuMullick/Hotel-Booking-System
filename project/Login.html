@@ -79,6 +79,10 @@ input[type=text]:focus, input[type=password]:focus {
 .btn:hover {
   opacity: 1;
 }
+
+.required {
+  color: red;
+}
 </style>
 	</head>
 
@@ -98,10 +102,10 @@ input[type=text]:focus, input[type=password]:focus {
   <form action="UserProfile.html" class="container">
     <h1>Login</h1>
 
-    <label for="username"><b>Username</b></label>
+    <label for="username"><b>Username</b><span class="required">*</span></label>
     <input type="text" class = "form-control item" maxlength = "15" minlength = "4" pattern = "^[a-zA-Z0-9_.-]*$"  placeholder="Enter username" name="username" required>
 
-    <label for="psw"><b>Password</b></label>
+    <label for="psw"><b>Password</b><span class="required">*</span></label>
     <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password" name="psw" required>
 	<p class="psw">Don't have one? <a href="Registration.html"> Create account</a></p>

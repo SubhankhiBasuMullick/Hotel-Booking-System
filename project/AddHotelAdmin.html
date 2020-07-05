@@ -32,6 +32,10 @@
 			background-size: cover;
 			position: relative;
 		}
+
+		.required {
+  color: red;
+}
 	</style>
 
 
@@ -47,25 +51,25 @@
 			<form method="POST" class="myValidation">
 				<div class="form-row">
 					<div class="form-group col-md-12">
-						<label for="inputEmail4">Enter Hotel Name :</label>
+						<label for="inputEmail4">Enter Hotel Name :<span class="required">*</span></label>
 						<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="([A-z0-9À-ž\s]){2,}" id="inputEmail4" placeholder="Hotel Name" required>
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-6">
-						<label for="inputEmail4">Enter Address:</label>
+						<label for="inputEmail4">Enter Address:<span class="required">*</span></label>
 						<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[A-Za-z0-9'\.\-\s\,]" id="inputEmail4" placeholder="Location" required>
 					</div>
 					<div class="form-group col-md-6">
-						<label for="inputEmail4">Enter City:</label>
+						<label for="inputEmail4">Enter City:<span class="required">*</span></label>
 						<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" id="inputEmail4" placeholder="City" required>
 					</div>
 					<div class="form-group col-md-6">
-						<label for="inputEmail4">Enter State:</label>
+						<label for="inputEmail4">Enter State:<span class="required">*</span></label>
 						<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" id="inputEmail4" placeholder="State" required>
 					</div>
 					<div class="form-group col-md-6">
-						<label for="inputEmail4">Enter Pincode:</label>
+						<label for="inputEmail4">Enter Pincode:<span class="required">*</span></label>
 						<input type="text" pattern="^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$" class="form-control" id="inputEmail4" placeholder="Pincode" required>
 					</div>
 					<div class="form-group col-md-6">
@@ -75,12 +79,12 @@
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-6">
-						<label for="inputEmail4">Enter Number of Rooms:</label>
+						<label for="inputEmail4">Enter Number of Rooms:<span class="required">*</span></label>
 						<input type="number" name="noofRoom" min="1" max="100" class="form-control" id="inputEmail4"
 							placeholder="Rooms" required>
 					</div>
 					<div class="form-group col-md-6">
-						<label for="inputPassword4">Enter Rating :</label>
+						<label for="inputPassword4">Enter Rating :<span class="required">*</span></label>
 						<input type="number" name="rating" step="0.1" class="form-control" id="inputPassword4"
 							placeholder="Rating" required>
 					</div>
@@ -89,7 +93,7 @@
 				</div>
 				<div class="form-row m-0">
 					<div class="form-group mr-3 mb-0">
-					<label for="inputPassword4">Active :</label>
+					<label for="inputPassword4">Active :<span class="required">*</span></label>
 						<input type="radio" id="active" name="activity" value="active" required>
 						<label for="active">Yes</label>
 					</div>

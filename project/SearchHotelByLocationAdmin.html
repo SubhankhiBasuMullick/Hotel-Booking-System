@@ -28,6 +28,9 @@
   background-size: cover;
   position: relative;
 }
+.required {
+  color: red;
+}
 	</style>
 	
     
@@ -42,7 +45,7 @@
 		<form action="HotelListAdmin.html" method="POST">
 			<div class="form-row">
 				<div class="form-group col-md-12">
-					<label for="inputEmail4">Enter Location :</label>
+					<label for="inputEmail4">Enter Location :<span class="required">*</span></label>
 					<input type="text" class = "form-control item" maxlength = "20" minlength = "4" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" class="form-control" id="inputEmail4" placeholder="Location" required>
 				</div>
 			</div>
